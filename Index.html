@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate-Link Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Affiliate-Link Generator</h1>
+        <p>Geben Sie eine 12-stellige Nummer ein:</p>
+        <input type="text" id="inputNumber" placeholder="12-stellige Nummer">
+        <button onclick="generateLink()">Link erstellen</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function generateLink() {
+            const input = document.getElementById("inputNumber").value;
+            const resultDiv = document.getElementById("result");
+
+            if (input.length === 12 && !isNaN(input)) {
+                const link = `https://example.com/affiliate/${input}`;
+                resultDiv.innerHTML = `Ihr Link: <a href="${link}" target="_blank">${link}</a>`;
+            } else {
+                resultDiv.textContent = "Bitte geben Sie eine gültige 12-stellige Nummer ein.";
+                resultDiv.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
