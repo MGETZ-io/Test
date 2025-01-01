@@ -1,0 +1,72 @@
+<div style="margin: 0; padding: 0;">
+<h3 style="margin: 0; padding: 8px 5px 7px; vertical-align: middle; text-align: left; color:#001e49; background-color:#e6e6e6; font-family: Arial, Helvetica, sans-serif; font-size: 1em; font-weight: bold;">Routenplaner</h3>
+<div style="border: 1px solid #e6e6e6; margin: 0; padding: 4px;">
+<form action="https://nah.sh.hafas.de/bin/query.exe/dn?externalCall=yes" name="form_00110170014901127083400001410270697" method="post" style="display:inline" target="_blank">
+<input type="hidden" name="queryPageDisplayed" value="yes" />
+<table cellspacing="0" style="border:none;">
+<tr>
+<th style="font-family:Arial, Helvetica, sans-serif; font-size:12px; padding: 1px 3px  1px 3px; text-align:left; vertical-align:middle; font-weight:bold; width: 80px;">Von</th>
+</td>
+<td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; padding: 1px 3px  1px 3px; text-align:left; vertical-align:middle;">
+<input type="text" name="S" value="" maxlength="60" style="background-color:#fff; color: #000; width: 210px;" accesskey="f" />
+</td>
+</tr>
+<tr>
+<th style="font-family:Arial, Helvetica, sans-serif; font-size:12px; padding: 1px 3px  1px 3px; text-align:left; vertical-align:middle; font-weight:bold; width: 80px;">Nach</th>
+</td>
+<td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; padding: 1px 3px  1px 3px; text-align:left; vertical-align:middle;">
+<input type="text" name="Z" value="" maxlength="60" style="background-color:#fff; color: #000; width: 210px;" accesskey="t" />
+</td>
+</tr>
+<tr>
+<th style="font-family:Arial, Helvetica, sans-serif; font-size:12px; padding: 1px 3px  1px 3px; text-align:left; vertical-align:middle; font-weight:bold; width: 80px;">Datum</th>
+<td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; padding: 1px 3px  1px 3px; text-align:left; vertical-align:middle;">
+<input style="width:105px;" type="text" name="date" maxlength="14" value="" accesskey="d" />
+<script type="text/javascript">
+/* <![CDATA[ */
+var jsCurrentDate = new Date();
+var jsDay = jsCurrentDate.getDate();
+var jsMonth = eval(jsCurrentDate.getMonth() +1);
+var jsYear = eval(jsCurrentDate.getFullYear() % 100);
+var jsDayOutput = ((jsDay < 10) ? "0" + jsDay : jsDay);
+var jsMonthOutput = ((jsMonth < 10) ? "0" + jsMonth : jsMonth);
+var jsYearOutput = ((jsYear < 10) ? "0" + jsYear : jsYear);
+var jsDateOutput =  (jsDayOutput + "." + jsMonthOutput + "." + jsYearOutput);
+eval('document.form_00110170014901127083400001410270697.date.value=jsDateOutput');
+/* ]]> */
+</script>
+</td>
+<td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; padding: 1px 3px  1px 3px; text-align:left; vertical-align:middle;"> </td>
+</tr>
+<tr>
+<th style="font-family:Arial, Helvetica, sans-serif; font-size:12px; padding: 1px 3px  1px 3px; text-align:left; vertical-align:middle; font-weight:bold; width: 80px;">Uhrzeit</th>
+<td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; padding: 1px 3px  1px 3px; text-align:left; vertical-align:middle;">
+<input  style="width:105px;" type="text" name="time" value="" maxlength="5" accesskey="c" />
+<script type="text/javascript">
+/* <![CDATA[ */
+var jsCurrentTime = new Date();
+var jsHours = jsCurrentTime.getHours();
+var jsMinutes = jsCurrentTime.getMinutes();
+var jsHoursOutput = ((jsHours < 10) ? "0" + jsHours : jsHours);
+var jsMinutesOutput = ((jsMinutes < 10) ? "0" + jsMinutes : jsMinutes);
+var jsTimeOutput =  (jsHoursOutput + ":" + jsMinutesOutput);
+eval('document.form_00110170014901127083400001410270697.time.value=jsTimeOutput');
+/* ]]> */
+</script>
+</td>
+<td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; padding: 1px 3px  1px 3px; text-align:left; vertical-align:middle;">
+<select name="timesel" style="width:99px;">
+<option value="depart" selected="selected">Abfahrt</option>
+<option value="arrive" >Ankunft</option>
+</select>
+</td>
+</tr>
+</table>
+<div style="height:1px; background-color:#e6e6e6; margin: 10px 0 10px 0;"><hr style="display:none;" /></div>
+<div style="text-align:left; padding: 0;">
+<input type="hidden" name="start" value="Verbindungen suchen" />
+<input type="submit" name="start" value="Verbindungen suchen" style="background: rgb(0,161,169); background: -moz-linear-gradient(top, rgba(0,161,169,1) 0%, rgba(0,115,122,1) 100%) no-repeat scroll 0 0 rgba(0,115,122,1); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,161,169,1)), color-stop(100%,rgba(0,115,122,1))) no-repeat scroll 0 0 rgba(0,115,122,1); background: -webkit-linear-gradient(top, rgba(0,161,169,1) 0%,rgba(0,115,122,1) 100%) no-repeat scroll 0 0 rgba(0,115,122,1); background: -o-linear-gradient(top, rgba(0,161,169,1) 0%,rgba(0,115,122,1) 100%) no-repeat scroll 0 0 rgba(0,115,122,1); background: -ms-linear-gradient(top, rgba(0,161,169,1) 0%,rgba(0,115,122,1) 100%) no-repeat scroll 0 0 rgba(0,115,122,1); background: linear-gradient(to bottom, rgba(0,161,169,1) 0%,rgba(0,115,122,1) 100%) no-repeat scroll 0 0 rgba(0,115,122,1); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a1a9', endColorstr='#00737a',GradientType=0 ); background-position: 0px 0px;transition: all 0.4s ease-out 0s;border-radius: 2px;padding: 5px 10px;color: #fff;font: 14px/1.43 Arial,sans-serif;height: auto;border: 0px none;vertical-align: middle;font-weight: normal;text-transform: uppercase;display: inline-block;cursor: pointer;text-align: center;" accesskey="s" />
+</div>
+</form>
+</div>
+</div>
